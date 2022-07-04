@@ -1,0 +1,34 @@
+def weather_temp():
+    list_weather = []
+    with open ('Q1.csv','r') as f:
+        for line in f:
+            sample = line.split(",")
+            try:
+                temp = int(sample[1])
+                list_weather.append(temp)
+            except:
+                print("Invalid temperature input")
+
+
+def weather_temp():
+    list_weather = {}
+    with open ('Q1.csv','r') as f:
+        for line in f:
+            sample = line.split(",")
+            day = sample[0]
+            temp = sample[1]
+            list_weather[day] = temp
+
+def words_count():
+    dict_words = {}
+    with open ('poem.txt','r') as f:
+        for lines in f:
+            string = lines.split(" ")
+            for token in string :
+                token = token.replace('\n' , "")
+                if token in dict_words:
+                    dict_words[string] += 1
+                else:
+                    dict_words[string] = 1
+                
+
