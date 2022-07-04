@@ -40,6 +40,6 @@ class Solution:
         return pairs
         
 
-nums = [0,0,0]
+nums = [5,4,6]
 s = Solution()
 print(s.threeSum(nums))
